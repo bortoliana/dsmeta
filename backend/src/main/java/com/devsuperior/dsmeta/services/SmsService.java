@@ -32,7 +32,7 @@ import com.twilio.type.PhoneNumber;
 
         public void sendSms(Long SaleId) {
 
-            Sale sale = saleRepository.findById(saleId).get();
+            Sale sale = saleRepository.findById(SaleId).get();
 
             String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
             String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date + " com um total de R$ "
